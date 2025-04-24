@@ -1,10 +1,9 @@
-
-:root{
-  --blue:  rgb(3, 3, 88);
+root {
+  --blue: rgb(3, 3, 88);
   --gray: rgb(82, 78, 78);
 }
 
-*{
+* {
   margin: 0;
 }
 
@@ -12,10 +11,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-button{
+button {
   all: unset;
   padding: 6px 16px;
-  background:var(--blue);
+  background: var(--blue);
   height: 32px;
   color: white;
   font-weight: 500;
@@ -23,19 +22,19 @@ button{
 
 .container {
   margin: 75px auto;
-  max-width: 1280px ;
+  max-width: 1280px;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
-  max-width:1280px ;
+  max-width: 1280px;
   margin: 0 auto;
   height: 72px;
   align-items: center;
 }
 
-nav ul{
+nav ul {
   display: flex;
   list-style: none;
   gap: 24px;
@@ -49,19 +48,20 @@ nav ul{
   height: calc(100vh - 72px);
 }
 
-.hero-content{
+.hero-content {
   display: flex;
   flex-direction: column;
   gap: 36px;
 }
 
-.hero h1{
+.hero h1 {
   font-weight: 800;
   line-height: 105px;
   font-size: 108px;
   max-width: 1500px;
 }
-.hero p{
+
+.hero p {
   font-weight: 600;
   color: var(--gray);
   max-width: 600px;
@@ -77,26 +77,76 @@ nav ul{
   font-size: 24px;
 }
 
-.secondary-btn{
-
+.secondary-btn {
   background: transparent;
   color: var(--gray);
   border: 1px solid gray;
 }
 
-.hero-image{
+.hero-image {
   width: 500px;
   height: 300px;
 }
 
-.shopping p{
+.shopping p {
   font-size: 14px;
   margin-bottom: 8px;
 }
 
-.brand-icons{
+.brand-icons {
   display: flex;
   gap: 16px;
   width: 80px;
-  height: 50px
+  height: 50px;
+}
+
+/* Medium screens */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .hero h1 {
+    font-size: 80px;
+  }
+  .hero p {
+    font-size: 24px;
+  }
+  .hero-btn button {
+    font-size: 20px;
+  }
+}
+
+/* Small screens */
+@media (min-width: 480px) and (max-width: 767px) {
+  .hero {
+    flex-direction: column;
+  }
+  .hero-content {
+    gap: 24px;
+  }
+  .hero h1 {
+    font-size: 60px;
+  }
+  .hero p {
+    font-size: 20px;
+  }
+  .hero-btn button {
+    font-size: 18px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 479px) {
+  .hero {
+    flex-direction: column;
+  }
+  .hero-content {
+    gap: 18px;
+  }
+  .hero h1 {
+    font-size: 40px;
+  }
+  .hero p {
+    font-size: 16px;
+  }
+  .hero-btn button {
+    font-size: 14px;
+  }
 }
